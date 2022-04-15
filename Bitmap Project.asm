@@ -7,14 +7,13 @@
 # Macros
 .eqv	WIDTH		64
 
-.data
-
+			.data
 # Console output strings
 intro:			.asciiz	"WELCOME TO GALACTIC ATTACK! ENTER \"P\" TO PLAY!\n"
 enemy_msg:		.asciiz	"SPAWNING ENEMY\n"
 gain_point:		.asciiz	"YOU EARNED 1 POINT!\n"
-end_message:	.asciiz	"TIME IS UP! THANKS FOR PLAYING!\n"
-total_score:	.asciiz	"YOU EARNED A TOTAL OF "
+end_message:		.asciiz	"TIME IS UP! THANKS FOR PLAYING!\n"
+total_score:		.asciiz	"YOU EARNED A TOTAL OF "
 points:			.asciiz	" POINTS!"
 easter_egg:		.asciiz	"YOU FOUND AN EASTER EGG!"
 
@@ -23,7 +22,7 @@ easter_egg:		.asciiz	"YOU FOUND AN EASTER EGG!"
 # Example path for the ship bmp file: "C:\\Users\\...\\Desktop\\Bitmap Project\\ship.bmp
 ship_file:		.asciiz	"C:\\...\\ship.bmp"
 enemy_file:		.asciiz	"C:\\...\\enemy.bmp"
-explode_file:	.asciiz	"C:\\...\\explosion.bmp"
+explode_file:		.asciiz	"C:\\...\\explosion.bmp"
 impos_file:		.asciiz	"C:\\...\\impostor.bmp"
 
 # Color variable for the border color and ship laser
@@ -36,17 +35,17 @@ score:			.word		0
 file_buffer:	.space		306
 
 # Memory locations for pixel information for each sprite
-				.align		2
+			.align		2
 ship:			.space		321
-				.align		2
+			.align		2
 enemy:			.space		321
-				.align		2
+			.align		2
 explosion:		.space		321
-				.align		2
+			.align		2
 among_us:		.space		321
 
 
-.text
+			.text
 main:	
 	# draw border around game screen
 	move	$a0, $zero
