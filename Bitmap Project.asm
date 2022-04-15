@@ -32,7 +32,7 @@ sky_blue:		.word		0x00028BDA
 score:			.word		0
 
 # Buffer for when program reads from the BMP files for the pixel data
-file_buffer:	.space		306
+file_buffer:		.space		306
 
 # Memory locations for pixel information for each sprite
 			.align		2
